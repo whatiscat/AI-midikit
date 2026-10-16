@@ -1,3 +1,14 @@
+> [!IMPORTANT]
+> ### 🤖 本项目由 AI 生成 · AI-Generated Project
+>
+> 本仓库的**全部代码**（`midikit/` 库、39 个编辑算子、命令行工具、134 项测试、文档与示例）均由
+> **AI 编码智能体**编写；人类负责提出需求、给出反馈与验收。
+> **在用于生产环境前，请自行审查、测试并评估。**
+>
+> **English** — Every line of code, test and document in this repository was written by an
+> **AI coding agent**; a human supplied the requirements and reviewed the outcome.
+> Please review and test it yourself before using it in production.
+
 # midikit — 面向 AI 智能体的标准 MIDI 文件工具包
 
 [![tests](https://github.com/whatiscat/AI-midikit/actions/workflows/tests.yml/badge.svg)](https://github.com/whatiscat/AI-midikit/actions/workflows/tests.yml)
@@ -425,3 +436,17 @@ python tools/realworld_check.py "$HOME/Music"   # 真实语料批量体检
 `realworld_check` 对每个文件做：解析 → 重新序列化 → 再解析（要求事件流一致、字节幂等）→ 规范校验 → 移调 +3/-3 往返（要求音符完全复原）→ 与 mido 交叉比对格式/轨道数/时基，并**逐音符比对**（轨道/通道/音高/起止/力度全部一致）
 
 `test_verification` 覆盖：39 个算子逐个实跑（并要求不破坏文件、不产生悬空/孤儿音符、JSON 往返仍字节一致）、算子可逆性、随机文件模糊测试（含 running status 与 velocity=0 写法）、截断/位翻转输入不崩溃、全部 CLI 命令的退出码与 JSON 信封、拆分功能的通道/轨道/格式/命名/冲突处理。
+
+---
+
+## 13. 关于本项目（AI 生成说明）
+
+> **本项目由 AI 生成。** 全部代码、测试与文档均由 AI 编码智能体编写；人类负责提出需求、反馈与验收。
+> 请在用于生产环境前自行审查与测试。
+
+- **生成方式**：由 AI 编码智能体在人类需求驱动下完成设计、编码、测试与文档；每一步都用自动化验证兜底
+- **人类参与**：提出需求与方向、验收结果、决定发布（GitHub 账号、仓库设置与 Release 均为人操作）
+- **可验证性**：`tests/` 下 134 项自动化测试、`python midi.py selftest` 12 项内置不变量、
+  `tools/realworld_check.py` 真实语料体检（含与 mido 的**逐音符比对**）、
+  GitHub Actions 在 Windows/Linux × Python 3.8/3.13 上全部通过 —— 不必只凭信任，跑一遍即可
+- **免责**：AI 生成的代码可能包含错误、或存在与你预期不同的设计取舍；本项目按 MIT 许可"按原样"提供，不附带任何担保
