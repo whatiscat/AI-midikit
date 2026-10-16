@@ -1,0 +1,67 @@
+{
+  "input": "examples/demo.mid",
+  "output": "examples/demo_v2.mid",
+  "options": {
+    "running_status": false
+  },
+  "ops": [
+    {
+      "op": "quantize",
+      "grid": "1/16",
+      "strength": 0.9,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "humanize",
+      "timing": 8,
+      "velocity": 6,
+      "seed": 7,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "transpose",
+      "semitones": -12,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "set_velocity",
+      "mode": "scale",
+      "value": 0.85,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "strum",
+      "window": 24,
+      "tolerance": 4,
+      "direction": "up",
+      "tracks": [
+        1
+      ]
+    },
+    {
+      "op": "add_text",
+      "meta_type": "marker",
+      "text": "Intro",
+      "at": 0
+    },
+    {
+      "op": "tempo_ramp",
+      "bpm_start": 104,
+      "bpm_end": 120,
+      "start": 0,
+      "end": 1920,
+      "steps": 8
+    },
+    {
+      "op": "repair"
+    }
+  ]
+}

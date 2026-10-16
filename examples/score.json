@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "division": {
+    "type": "ppq",
+    "ticks_per_beat": 480
+  },
+  "tracks": [
+    {
+      "name": "Tempo",
+      "events": [
+        {
+          "tick": 0,
+          "type": "meta",
+          "meta_type": "set_tempo",
+          "bpm": 104
+        },
+        {
+          "tick": 0,
+          "type": "meta",
+          "meta_type": "time_signature",
+          "numerator": 4,
+          "denominator": 4
+        },
+        {
+          "tick": 0,
+          "type": "meta",
+          "meta_type": "key_signature",
+          "key": "Am"
+        }
+      ]
+    },
+    {
+      "name": "Piano",
+      "notes": [
+        {
+          "pitch": "A3",
+          "start": 0,
+          "duration": 480,
+          "velocity": 92
+        },
+        {
+          "pitch": "C4",
+          "start": 0,
+          "duration": 480,
+          "velocity": 84
+        },
+        {
+          "pitch": "E4",
+          "start": 0,
+          "duration": 480,
+          "velocity": 78
+        },
+        {
+          "pitch": "G3",
+          "start": 480,
+          "duration": 480,
+          "velocity": 90
+        },
+        {
+          "pitch": "B3",
+          "start": 480,
+          "duration": 480,
+          "velocity": 82
+        },
+        {
+          "pitch": "D4",
+          "start": 480,
+          "duration": 480,
+          "velocity": 76
+        },
+        {
+          "pitch": "F3",
+          "start": 960,
+          "duration": 960,
+          "velocity": 88
+        },
+        {
+          "pitch": "A3",
+          "start": 960,
+          "duration": 960,
+          "velocity": 80
+        },
+        {
+          "pitch": "C4",
+          "start": 960,
+          "duration": 960,
+          "velocity": 74
+        }
+      ]
+    },
+    {
+      "name": "Bass",
+      "channel": 1,
+      "notes": [
+        {
+          "pitch": "A1",
+          "start": 0,
+          "duration": 960,
+          "velocity": 86,
+          "channel": 1
+        },
+        {
+          "pitch": "G1",
+          "start": 960,
+          "duration": 960,
+          "velocity": 84,
+          "channel": 1
+        }
+      ]
+    }
+  ]
+}

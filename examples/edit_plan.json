@@ -1,0 +1,74 @@
+{
+  "input": "song.mid",
+  "output": "song_v2.mid",
+  "options": {
+    "backup": false,
+    "running_status": false
+  },
+  "ops": [
+    {
+      "op": "quantize",
+      "grid": "1/16",
+      "strength": 0.9,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "humanize",
+      "timing": 8,
+      "velocity": 6,
+      "seed": 7,
+      "match": {
+        "track": 1
+      }
+    },
+    {
+      "op": "transpose",
+      "degrees": 3,
+      "scale": "major",
+      "root": "C",
+      "match": {
+        "track": 2
+      }
+    },
+    {
+      "op": "set_velocity",
+      "mode": "ramp",
+      "value": 45,
+      "value_to": 110,
+      "match": {
+        "track": 2
+      }
+    },
+    {
+      "op": "tempo_ramp",
+      "bpm_start": 96,
+      "bpm_end": 128,
+      "start": "8bar",
+      "end": "16bar",
+      "steps": 24
+    },
+    {
+      "op": "add_text",
+      "meta_type": "marker",
+      "text": "Chorus",
+      "at": "16bar"
+    },
+    {
+      "op": "copy_region",
+      "start": "16bar",
+      "end": "24bar",
+      "to": "24bar",
+      "repeat": 1,
+      "tracks": [
+        1,
+        2
+      ]
+    },
+    {
+      "op": "repair",
+      "dedupe": true
+    }
+  ]
+}

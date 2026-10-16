@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midikit"
+version = "1.0.0"
+description = "Standard MIDI File 1.1 toolkit for AI agents: precise, scriptable, zero-dependency"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["midi", "smf", "music", "agent", "automation", "llm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio :: MIDI",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/whatiscat/AI-midikit"
+Repository = "https://github.com/whatiscat/AI-midikit"
+Issues = "https://github.com/whatiscat/AI-midikit/issues"
+Changelog = "https://github.com/whatiscat/AI-midikit/commits/main"
+
+[project.scripts]
+midikit = "midikit.cli:main"
+
+[tool.setuptools]
+packages = ["midikit", "midikit.ops"]
+
+[tool.setuptools.package-data]
+midikit = ["py.typed"]
